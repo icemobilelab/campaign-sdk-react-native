@@ -1,0 +1,16 @@
+PODS:
+  - campaign (0.2.0)
+
+DEPENDENCIES:
+  - campaign (= 0.2.0)
+
+SPEC REPOS:
+  trunk:
+    - campaign
+
+SPEC CHECKSUMS:
+  campaign: 0dc4bc28a33a9fd9ddd9ebf948aefc6d1f400a8d
+
+PODFILE CHECKSUM: c6a5b612f303a02b09357f9ad8dd489fe4ff28b4
+
+COCOAPODS: 1.12.0

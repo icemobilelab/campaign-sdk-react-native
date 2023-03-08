@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E555C0D2413F4C50049A1A2 /* CampaignSdkReactNative.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* CampaignSdkReactNative.m */; };
-		F4FF95D7245B92E800C19C63 /*  CampaignSdkReactNative.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /*  CampaignSdkReactNative.swift */; };
+		2E6438B51A563DDE7016E257 /* Pods_CampaignSdkReactNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C984A25203D523B26B7176C4 /* Pods_CampaignSdkReactNative.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,10 +23,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		086286BA29B8D9710069AF13 /* CampaignSdkReactNativeViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CampaignSdkReactNativeViewManager.m; sourceTree = "<group>"; };
+		086286BB29B8D9710069AF13 /* CampaignSdkReactNativeViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignSdkReactNativeViewManager.swift; sourceTree = "<group>"; };
+		0F096176D2B7FCCF3045795C /* Pods-CampaignSdkReactNative.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampaignSdkReactNative.release.xcconfig"; path = "Target Support Files/Pods-CampaignSdkReactNative/Pods-CampaignSdkReactNative.release.xcconfig"; sourceTree = "<group>"; };
 		134814201AA4EA6300B7C361 /* libCampaignSdkReactNative.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCampaignSdkReactNative.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3E7B5891CC2AC0600A0062D /* CampaignSdkReactNative.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampaignSdkReactNative.m; sourceTree = "<group>"; };
+		C984A25203D523B26B7176C4 /* Pods_CampaignSdkReactNative.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CampaignSdkReactNative.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEBA310BEC4B1B6DC8CAB42F /* Pods-CampaignSdkReactNative.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampaignSdkReactNative.debug.xcconfig"; path = "Target Support Files/Pods-CampaignSdkReactNative/Pods-CampaignSdkReactNative.debug.xcconfig"; sourceTree = "<group>"; };
 		F4FF95D5245B92E700C19C63 /* CampaignSdkReactNative-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CampaignSdkReactNative-Bridging-Header.h"; sourceTree = "<group>"; };
-		F4FF95D6245B92E800C19C63 /* CampaignSdkReactNative.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignSdkReactNative.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E6438B51A563DDE7016E257 /* Pods_CampaignSdkReactNative.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,14 +52,34 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		39C9F5E123BD3F8A574B056D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C984A25203D523B26B7176C4 /* Pods_CampaignSdkReactNative.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				F4FF95D6245B92E800C19C63 /* CampaignSdkReactNative.swift */,
-				B3E7B5891CC2AC0600A0062D /* CampaignSdkReactNative.m */,
+				086286BA29B8D9710069AF13 /* CampaignSdkReactNativeViewManager.m */,
+				086286BB29B8D9710069AF13 /* CampaignSdkReactNativeViewManager.swift */,
 				F4FF95D5245B92E700C19C63 /* CampaignSdkReactNative-Bridging-Header.h */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				98D3288272B1A0D25D7848AC /* Pods */,
+				39C9F5E123BD3F8A574B056D /* Frameworks */,
 			);
+			sourceTree = "<group>";
+		};
+		98D3288272B1A0D25D7848AC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DEBA310BEC4B1B6DC8CAB42F /* Pods-CampaignSdkReactNative.debug.xcconfig */,
+				0F096176D2B7FCCF3045795C /* Pods-CampaignSdkReactNative.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -66,6 +89,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "CampaignSdkReactNative" */;
 			buildPhases = (
+				98D55621EC61AF28C459CFFB /* [CP] Check Pods Manifest.lock */,
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
 				58B511D91A9E6C8500147676 /* CopyFiles */,
@@ -111,13 +135,36 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		98D55621EC61AF28C459CFFB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CampaignSdkReactNative-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		58B511D71A9E6C8500147676 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4FF95D7245B92E800C19C63 /* CampaignSdkReactNative.swift in Sources */,
-				B3E7B58A1CC2AC0600A0062D /* CampaignSdkReactNative.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,7 +215,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -212,7 +259,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -221,6 +268,7 @@
 		};
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEBA310BEC4B1B6DC8CAB42F /* Pods-CampaignSdkReactNative.debug.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -240,6 +288,7 @@
 		};
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F096176D2B7FCCF3045795C /* Pods-CampaignSdkReactNative.release.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
