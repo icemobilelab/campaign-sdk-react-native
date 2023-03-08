@@ -12,13 +12,14 @@ const LINKING_ERROR =
   '- You are not using Expo Go\n';
 
 type CampaignSdkReactNativeProps = {
-  color: string;
+  apiKey: string;
+  cardNumber: string;
   style: ViewStyle;
 };
 
-const ComponentName = 'CampaignSdkReactNativeView';
+const ComponentName = 'CampaignView';
 
-export const CampaignSdkReactNativeView =
+export const CampaignView =
   UIManager.getViewManagerConfig(ComponentName) != null
     ? requireNativeComponent<CampaignSdkReactNativeProps>(ComponentName)
     : () => {

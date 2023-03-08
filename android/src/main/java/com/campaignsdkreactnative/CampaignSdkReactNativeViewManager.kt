@@ -1,20 +1,23 @@
 package com.campaignsdkreactnative
 
-import android.graphics.Color
-import android.view.View
 import com.facebook.react.uimanager.SimpleViewManager
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 
-class CampaignSdkReactNativeViewManager : SimpleViewManager<View>() {
-  override fun getName() = "CampaignSdkReactNativeView"
+class CampaignSdkReactNativeViewManager : SimpleViewManager<CampaignSdkView>() {
+  override fun getName() = "CampaignView"
 
-  override fun createViewInstance(reactContext: ThemedReactContext): View {
-    return View(reactContext)
+  override fun createViewInstance(reactContext: ThemedReactContext): CampaignSdkView {
+    return CampaignSdkView(reactContext)
   }
 
-  @ReactProp(name = "color")
-  fun setColor(view: View, color: String) {
-    view.setBackgroundColor(Color.parseColor(color))
+  @ReactProp(name = "cardNumber")
+  fun cardNumber(view: CampaignSdkView, cardNumber: String) {
+    view.setCardNumber(cardNumber)
+  }
+
+  @ReactProp(name = "apiKey")
+  fun apiKey(view: CampaignSdkView, apiKey: String) {
+    view.setApiKey(apiKey)
   }
 }
