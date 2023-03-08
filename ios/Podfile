@@ -6,6 +6,6 @@ target 'CampaignSdkReactNative' do
   use_frameworks!
 
   # Pods for CampaignSdkReactNative
-  pod 'campaign', '0.2.0'
+  # pod 'campaign', '0.2.0'
 
 end

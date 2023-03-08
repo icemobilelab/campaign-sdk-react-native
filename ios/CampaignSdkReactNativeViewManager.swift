@@ -1,3 +1,5 @@
+import Campaign
+
 @objc(CampaignViewManager)
 class CampaignViewManager: RCTViewManager {
 
