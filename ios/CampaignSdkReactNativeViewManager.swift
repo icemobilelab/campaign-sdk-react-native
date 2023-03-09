@@ -18,17 +18,16 @@ class CampaignSdkView : UIView {
             let campaignConfig = try! CampaignConfig.Builder()
                 .withCardNumberProvider(ReactNativeCardNumberProvider(card: self.params["cardNumber"]!))
                 .build(apiKey: self.params["apiKey"]!)
+
             IceCampaign.initialize(config: campaignConfig)
-
-            let window = UIApplication.shared
-                .connectedScenes
-                .compactMap { $0 as? UIWindowScene }
-                .flatMap { $0.windows }
-                .first { $0.isKeyWindow }
-
-            let campaingView = CampaignView(frame: window!.bounds)
-            self.addSubview(campaingView)
         }
+    }
+    
+    override func reactSetFrame(_ frame: CGRect) {
+        super.reactSetFrame(frame)
+
+        let campaingView = CampaignView(frame: frame)
+        self.addSubview(campaingView)
     }
 }
 
