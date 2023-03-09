@@ -15,6 +15,7 @@ class CampaignSdkView(context: Context): FrameLayout(context) {
         .build(values.getString("apiKey")!!)
     )
 
+    removeAllViews()
     addView(CampaignView(context))
   }
 }
