@@ -20,7 +20,14 @@ class CampaignSdkView : UIView {
                 .build(apiKey: self.params["apiKey"]!)
             IceCampaign.initialize(config: campaignConfig)
 
-            self.addSubview(CampaignView(frame: self.bounds))
+            let window = UIApplication.shared
+                .connectedScenes
+                .compactMap { $0 as? UIWindowScene }
+                .flatMap { $0.windows }
+                .first { $0.isKeyWindow }
+
+            let campaingView = CampaignView(frame: window!.bounds)
+            self.addSubview(campaingView)
         }
     }
 }

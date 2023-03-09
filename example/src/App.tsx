@@ -18,10 +18,10 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 1
   },
   box: {
     width: '100%',
-    height: '100%',
+    height: '100%'
   },
 });

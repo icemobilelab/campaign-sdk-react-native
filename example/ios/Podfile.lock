@@ -1,8 +1,8 @@
 PODS:
   - boost (1.76.0)
-  - campaign (0.2.2)
+  - campaign (0.2.3)
   - campaign-sdk-react-native (0.1.0):
-    - campaign (= 0.2.2)
+    - campaign (= 0.2.3)
     - React-Core
   - CocoaAsyncSocket (7.6.5)
   - DoubleConversion (1.1.6)
@@ -577,8 +577,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   boost: 57d2868c099736d80fcd648bf211b4431e51a558
-  campaign: 9be4e83fc4717a728b074c2399df65d77d05d355
-  campaign-sdk-react-native: e46cb136dcc3f2281d2e6dd05907f2ed1789ac5e
+  campaign: 4a790eb46e8df1a264dfb4b8d706206dbe985e58
+  campaign-sdk-react-native: a2493e57512d93aa2711354d31ccc0dacb39c03e
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   DoubleConversion: 5189b271737e1565bdce30deb4a08d647e3f5f54
   FBLazyVector: 60195509584153283780abdac5569feffb8f08cc
