@@ -11,21 +11,12 @@ npm install campaign-sdk-react-native
 ## Usage
 
 ```js
-import { CampaignSdkReactNativeView } from "campaign-sdk-react-native";
+import { CampaignView } from "campaign-sdk-react-native";
 
 // ...
 
-<CampaignSdkReactNativeView color="tomato" />
+<CampaignView params={} style={} />
 ```
 
-## Contributing
-
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
-
-## License
-
-MIT
-
 ---
-
-Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)
+For the complete documentation please refer to our [wiki](https://github.com/icemobilelab/campaign-sdk/wiki/React-Native)
