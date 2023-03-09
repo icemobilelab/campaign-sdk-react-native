@@ -26,8 +26,10 @@ class CampaignSdkView : UIView {
     override func reactSetFrame(_ frame: CGRect) {
         super.reactSetFrame(frame)
 
-        let campaingView = CampaignView(frame: frame)
-        self.addSubview(campaingView)
+        let campaingView = self.subviews.first as? CampaignView
+        campaingView?.removeFromSuperview()
+        
+        self.addSubview(CampaignView(frame: frame))
     }
 }
 
