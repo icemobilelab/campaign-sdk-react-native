@@ -11,8 +11,13 @@ const LINKING_ERROR =
   '- You rebuilt the app after installing the package\n' +
   '- You are not using Expo Go\n';
 
+type CampaignViewParamsProps = {
+  apiKey: string;
+  cardNumber: string;
+}
+
 type CampaignSdkReactNativeProps = {
-  params: object;
+  params: CampaignViewParamsProps;
   style: ViewStyle;
 };
 
