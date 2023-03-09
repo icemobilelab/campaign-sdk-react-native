@@ -4,9 +4,14 @@ import { StyleSheet, View } from 'react-native';
 import { CampaignView } from 'campaign-sdk-react-native';
 
 export default function App() {
+  const sdkData = {
+    apiKey: "client1",
+    cardNumber: "card-number"
+  }
+
   return (
     <View style={styles.container}>
-      <CampaignView cardNumber="card-number" apiKey="client1" style={styles.box} />
+      <CampaignView params={sdkData} style={styles.box} />
     </View>
   );
 }

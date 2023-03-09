@@ -12,8 +12,7 @@ const LINKING_ERROR =
   '- You are not using Expo Go\n';
 
 type CampaignSdkReactNativeProps = {
-  apiKey: string;
-  cardNumber: string;
+  params: object;
   style: ViewStyle;
 };
 

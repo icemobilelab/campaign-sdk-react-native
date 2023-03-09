@@ -13,15 +13,22 @@ class CampaignViewManager: RCTViewManager {
 }
 
 class CampaignSdkView : UIView {
-
-    @objc var apiKey: String = "" {
+    @objc var params: [String : String] = [:] {
         didSet {
+            let campaignConfig = try! CampaignConfig.Builder()
+                .withCardNumberProvider(ReactNativeCardNumberProvider(card: self.params["cardNumber"]!))
+                .build(apiKey: self.params["apiKey"]!)
+            IceCampaign.initialize(config: campaignConfig)
+
+            self.addSubview(CampaignView(frame: self.bounds))
         }
     }
+}
 
-    @objc var cardNumber: String = "" {
-        didSet {
-            
-        }
+struct ReactNativeCardNumberProvider : CardNumberProvider {
+    let card: String
+
+    func get() -> String {
+        return self.card
     }
 }
