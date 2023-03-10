@@ -13,13 +13,24 @@ class CampaignViewManager: RCTViewManager {
 }
 
 class CampaignSdkView : UIView {
-    @objc var params: [String : String] = [:] {
+    @objc var params: [String : Any] = [:] {
         didSet {
-            let campaignConfig = try! CampaignConfig.Builder()
-                .withCardNumberProvider(ReactNativeCardNumberProvider(card: self.params["cardNumber"]!))
-                .build(apiKey: self.params["apiKey"]!)
+            let campaignConfig = CampaignConfig.Builder()
+                .withCardNumberProvider(RNCardNumberProvider(card: self.params["cardNumber"] as! String))
 
-            IceCampaign.initialize(config: campaignConfig)
+            if let locale = self.params["locale"] as? String {
+                campaignConfig.withLocaleProvider(RNLocaleProvider(locale: locale))
+            }
+
+            if let authentication = self.params["auth"] as? String {
+                campaignConfig.withAuthenticationProvider(RNAuthenticationProvider(authentication: authentication))
+            }
+
+            if let extraParams = self.params["extra"] as? Dictionary<String, Any> {
+                campaignConfig.withExtraParameterProvider(RNExtraParamProvider(params: extraParams))
+            }
+
+            IceCampaign.initialize(config: try! campaignConfig.build(apiKey: self.params["apiKey"] as! String))
         }
     }
     
@@ -33,10 +44,34 @@ class CampaignSdkView : UIView {
     }
 }
 
-struct ReactNativeCardNumberProvider : CardNumberProvider {
+struct RNCardNumberProvider : CardNumberProvider {
     let card: String
 
     func get() -> String {
         return self.card
+    }
+}
+
+struct RNLocaleProvider: LocaleProvider {
+    let locale: String
+
+    func get() -> Locale {
+        return Locale(identifier: self.locale)
+    }
+}
+
+struct RNAuthenticationProvider: AuthenticationProvider {
+    let authentication: String
+
+    func get() -> String {
+        return self.authentication
+    }
+}
+
+struct RNExtraParamProvider: ExtraParameterProvider {
+    let params: [String : Any]
+
+    func get() -> [String : String] {
+        return self.params.mapValues { String(describing: $0) }
     }
 }

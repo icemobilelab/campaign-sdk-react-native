@@ -14,6 +14,9 @@ const LINKING_ERROR =
 type CampaignViewParamsProps = {
   apiKey: string;
   cardNumber: string;
+  locale?: string;
+  auth?: string;
+  extra?: object;
 }
 
 type CampaignSdkReactNativeProps = {
