@@ -150,7 +150,7 @@
       "commonjs",
       "module",
       "typescript",
-      "aar"
+      ["aar", { "androidBundleName":  "android-release.aar" }]
     ]
   }
 }
