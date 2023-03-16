@@ -17,7 +17,7 @@ type CampaignViewParamsProps = {
   locale?: string;
   auth?: string;
   extra?: object;
-}
+};
 
 type CampaignSdkReactNativeProps = {
   params: CampaignViewParamsProps;
