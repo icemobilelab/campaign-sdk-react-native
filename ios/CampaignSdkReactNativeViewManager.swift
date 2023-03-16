@@ -27,7 +27,7 @@ class CampaignSdkView : UIView {
             }
 
             if let extraParams = self.params["extra"] as? Dictionary<String, Any> {
-                campaignConfig.withExtraParameterProvider(RNExtraParamProvider(params: extraParams))
+                campaignConfig.withExtraParameterProvider(RNExtraParamProvider(params: extraParams.mapValues { String(describing: $0) }))
             }
 
             IceCampaign.initialize(config: try! campaignConfig.build(apiKey: self.params["apiKey"] as! String))
@@ -69,9 +69,9 @@ struct RNAuthenticationProvider: AuthenticationProvider {
 }
 
 struct RNExtraParamProvider: ExtraParameterProvider {
-    let params: [String : Any]
+    let params: [String : String]
 
     func get() -> [String : String] {
-        return self.params.mapValues { String(describing: $0) }
+        return self.params
     }
 }
