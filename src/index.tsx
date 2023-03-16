@@ -21,7 +21,7 @@ type CampaignViewParamsProps = {
 
 type CampaignSdkReactNativeProps = {
   params: CampaignViewParamsProps;
-  style: ViewStyle;
+  style?: ViewStyle;
 };
 
 const ComponentName = 'CampaignView';
