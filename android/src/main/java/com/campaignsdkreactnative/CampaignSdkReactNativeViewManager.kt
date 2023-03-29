@@ -13,7 +13,27 @@ class CampaignSdkReactNativeViewManager : SimpleViewManager<CampaignSdkView>() {
   }
 
   @ReactProp(name = "params")
-  fun cardNumber(view: CampaignSdkView, values: ReadableMap) {
+  fun setParams(view: CampaignSdkView, values: ReadableMap) {
+    //Set error handler and then trigger custom event
     view.setParams(values)
+  }
+
+  @ReactProp(name = "reload")
+  fun reload(view: CampaignSdkView, reload: Boolean) {
+    if (reload) {
+      //Reload sdk
+    }
+  }
+
+  override fun getExportedCustomBubblingEventTypeConstants(): MutableMap<String, Any>? {
+    val map = super.getExportedCustomBubblingEventTypeConstants()
+    map?.put(
+      "onError", mapOf(
+        "phasedRegistrationNames" to mapOf(
+          "bubbled" to "onError"
+        )
+      )
+    )
+    return map
   }
 }
