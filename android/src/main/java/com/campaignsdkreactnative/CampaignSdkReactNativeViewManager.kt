@@ -21,7 +21,7 @@ class CampaignSdkReactNativeViewManager : SimpleViewManager<CampaignSdkView>() {
   @ReactProp(name = "reload")
   fun reload(view: CampaignSdkView, reload: Boolean) {
     if (reload) {
-      //Reload sdk
+      view.reload()
     }
   }
 
