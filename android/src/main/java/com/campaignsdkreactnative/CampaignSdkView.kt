@@ -50,6 +50,4 @@ class CampaignSdkView(context: Context): FrameLayout(context) {
     removeAllViews()
     addView(campaignView)
   }
-
-  fun reload() = campaignView?.reload()
 }

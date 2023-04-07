@@ -19,9 +19,7 @@ class CampaignSdkReactNativeViewManager : SimpleViewManager<CampaignSdkView>() {
 
   @ReactProp(name = "reload")
   fun reload(view: CampaignSdkView, reload: Boolean) {
-    if (reload) {
-      view.reload()
-    }
+    //TODO add support for reload
   }
 
   override fun getExportedCustomBubblingEventTypeConstants(): MutableMap<String, Any>? {
