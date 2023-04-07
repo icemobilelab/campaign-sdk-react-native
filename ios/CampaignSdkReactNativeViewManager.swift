@@ -4,7 +4,7 @@ import Campaign
 class CampaignViewManager: RCTViewManager {
 
   override func view() -> (CampaignSdkView) {
-    return CampaignSdkView()
+      return CampaignSdkView()
   }
 
   @objc override static func requiresMainQueueSetup() -> Bool {
@@ -13,6 +13,8 @@ class CampaignViewManager: RCTViewManager {
 }
 
 class CampaignSdkView : UIView {
+    private var campaignView: CampaignView? = nil
+    
     @objc var params: [String : Any] = [:] {
         didSet {
             let campaignConfig = CampaignConfig.Builder()
@@ -34,13 +36,30 @@ class CampaignSdkView : UIView {
         }
     }
     
+    @objc var reload: Bool = false {
+        didSet {
+            //TODO - support the reload method
+        }
+    }
+
+    @objc var onError: RCTDirectEventBlock?
+
+    private func initCampaignView(_ frame: CGRect) {
+        self.campaignView = CampaignView(frame: frame)
+        self.campaignView?.setErrorHandler { _ in
+            self.onError?(["onError": [String]()])
+            return nil
+        }
+    }
+
     override func reactSetFrame(_ frame: CGRect) {
         super.reactSetFrame(frame)
 
         let campaingView = self.subviews.first as? CampaignView
         campaingView?.removeFromSuperview()
-        
-        self.addSubview(CampaignView(frame: frame))
+
+        self.initCampaignView(frame)
+        self.addSubview(self.campaignView!)
     }
 }
 

@@ -9,9 +9,13 @@ export default function App() {
     cardNumber: 'card-number',
   };
 
+  const onSdkError = () => {
+    /* Do something with the error like render a new view */
+  }
+
   return (
     <View style={styles.container}>
-      <CampaignView params={sdkData} style={styles.box} />
+      <CampaignView params={sdkData} style={styles.box} onError={onSdkError} />
     </View>
   );
 }
