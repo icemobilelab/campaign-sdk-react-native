@@ -11,7 +11,7 @@ export default function App() {
 
   const onSdkError = () => {
     /* Do something with the error like render a new view */
-  }
+  };
 
   return (
     <View style={styles.container}>
