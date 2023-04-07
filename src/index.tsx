@@ -23,7 +23,7 @@ type CampaignSdkReactNativeProps = {
   params: CampaignViewParamsProps;
   reload?: boolean;
   style?: ViewStyle;
-  onError: Function;
+  onError?: Function;
 };
 
 const ComponentName = 'CampaignView';

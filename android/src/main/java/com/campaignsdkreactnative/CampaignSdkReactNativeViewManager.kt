@@ -14,7 +14,6 @@ class CampaignSdkReactNativeViewManager : SimpleViewManager<CampaignSdkView>() {
 
   @ReactProp(name = "params")
   fun setParams(view: CampaignSdkView, values: ReadableMap) {
-    //Set error handler and then trigger custom event
     view.setParams(values)
   }
 

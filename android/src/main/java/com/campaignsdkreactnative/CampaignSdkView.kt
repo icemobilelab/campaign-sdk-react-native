@@ -10,10 +10,11 @@ import com.icemobile.campaign.CampaignView
 import com.icemobile.campaign.IceCampaign
 
 class CampaignSdkView(context: Context): FrameLayout(context) {
-  private val campaignView = CampaignView(context)
+  private var campaignView: CampaignView? = null
 
-  init {
-    campaignView.setErrorHandler {
+  private fun setUpCampaignView() {
+    campaignView = CampaignView(context)
+    campaignView?.setErrorHandler {
       publishError()
       null
     }
@@ -45,9 +46,10 @@ class CampaignSdkView(context: Context): FrameLayout(context) {
       config.build(values.getString("apiKey")!!)
     )
 
+    setUpCampaignView()
     removeAllViews()
     addView(campaignView)
   }
 
-  fun reload() = campaignView.reload()
+  fun reload() = campaignView?.reload()
 }
