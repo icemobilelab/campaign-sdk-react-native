@@ -1,6 +1,6 @@
 {
   "name": "campaign-sdk-react-native",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "test",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
